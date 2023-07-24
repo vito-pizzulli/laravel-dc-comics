@@ -1,3 +1,3 @@
 <header>
-    <h1>Laravel DC Comics Back Office</h1>
+    <h1>Laravel DC Comics Index Panel</h1>
 </header>
