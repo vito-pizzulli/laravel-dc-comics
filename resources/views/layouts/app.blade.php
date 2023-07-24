@@ -17,8 +17,6 @@
     <main>
         @yield('main-section')
     </main>
-
-    @include('partials.footer')
     
     @yield('custom-scripts-tail')
 </body>
