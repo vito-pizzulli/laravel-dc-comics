@@ -3,19 +3,21 @@
 @section('title', 'Laravel DC Comics Single Comic')
 
 @section('main-section')
-<div class="container">
+<div class="container p-5">
     <div class="row">
-        <div class="col-12">
-            <h2>Title: {{ $comic->title }}</h2>
-            <img src="{{ $comic->thumb }}" alt="Comic Cover" class="w-25">
-            <p>ID: {{ $comic->id }}</p>
-            <p>Description: {{ $comic->description }}</p>
-            <p>Price: {{ $comic->price }}</p>
-            <p>Series: {{ $comic->series }}</p>
-            <p>Sale Date: {{ $comic->sale_date }}</p>
-            <p>Type: {{ $comic->type }}</p>
-            <p>Artists: {{ implode(', ', $comic->artists) }}.</p>
-            <p>Writers: {{ implode(', ', $comic->writers) }}.</p>
+        <div class="col-8">
+            <h2><span class="text-primary">Title:</span> {{ $comic->title }}</h2>
+            <p><span class="text-primary">ID:</span> {{ $comic->id }}</p>
+            <p><span class="text-primary">Description:</span> {{ $comic->description }}</p>
+            <p><span class="text-primary">Price:</span> {{ $comic->price }}</p>
+            <p><span class="text-primary">Series:</span> {{ $comic->series }}</p>
+            <p><span class="text-primary">Sale Date:</span> {{ $comic->sale_date }}</p>
+            <p><span class="text-primary">Type:</span> {{ $comic->type }}</p>
+            <p><span class="text-primary">Artists:</span> {{ implode(', ', $comic->artists) }}.</p>
+            <p><span class="text-primary">Writers:</span> {{ implode(', ', $comic->writers) }}.</p>
+        </div>
+        <div class="col-4">
+            <img src="{{ $comic->thumb }}" alt="Comic Cover">
         </div>
     </div>
 </div>

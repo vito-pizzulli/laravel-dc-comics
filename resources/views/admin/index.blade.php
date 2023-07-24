@@ -3,7 +3,7 @@
 @section('title', 'Laravel DC Comics Index Panel')
 
 @section('main-section')
-<div class="container">
+<div class="container p-5">
     <div class="row">
         <div class="col-12">
             <table class="table table-bordered table-striped table-hover">
