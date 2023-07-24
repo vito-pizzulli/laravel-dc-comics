@@ -17,7 +17,7 @@
             <p><span class="text-primary">Writers:</span> {{ implode(', ', $comic->writers) }}.</p>
         </div>
         <div class="col-4">
-            <img src="{{ $comic->thumb }}" alt="Comic Cover">
+            <img src="{{ $comic->thumb }}" alt="Comic Cover" class="mw-100">
         </div>
     </div>
 </div>

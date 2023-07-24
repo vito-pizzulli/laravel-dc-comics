@@ -21,13 +21,13 @@
                 <tbody>
                     @foreach ($comicsList as $comic)
                         <tr>
-                            <th scope="row">{{ $comic->id }}</th>
+                            <th scope="row" class="text-center">{{ $comic->id }}</th>
                             <td>{{ $comic->title }}</td>
-                            <td>{{ $comic->price }}</td>
+                            <td class="text-center">{{ $comic->price }}</td>
                             <td>{{ $comic->series }}</td>
-                            <td>{{ $comic->sale_date }}</td>
-                            <td>{{ $comic->type }}</td>
-                            <td><a class="btn btn-sm btn-primary me-2" href="{{ route('admin.show', $comic->id) }}">View</a></td>
+                            <td class="text-center">{{ $comic->sale_date }}</td>
+                            <td class="text-center">{{ $comic->type }}</td>
+                            <td class="text-center"><a class="btn btn-sm btn-primary me-2" href="{{ route('admin.show', $comic->id) }}">View</a></td>
                         </tr>
                     @endforeach
                 </tbody>
