@@ -1,3 +1,3 @@
 <header>
-    <h2>I'm the Header!</h2>
+    <h1>Laravel DC Comics Back Office</h1>
 </header>
