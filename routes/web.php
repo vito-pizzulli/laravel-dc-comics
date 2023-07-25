@@ -15,4 +15,6 @@ use App\Http\Controllers\Admin\PageController as AdminPageController;
 */
 
 Route::get('/', [AdminPageController::class, 'index'])->name('admin.index');
+Route::get('/create', [AdminPageController::class, 'create'])->name('admin.create');
+Route::post('/', [AdminPageController::class, 'store'])->name('admin.store');
 Route::get('/{id}', [AdminPageController::class, 'show'])->name('admin.show');
