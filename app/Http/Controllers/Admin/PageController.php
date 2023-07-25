@@ -38,19 +38,11 @@ class PageController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+        
         $newComic = new Comic();
-
-        $newComic->title = $data['title'];
-        $newComic->description = $data['description'];
-        $newComic->thumb = $data['thumb'];
-        $newComic->price = $data['price'];
-        $newComic->series = $data['series'];
-        $newComic->sale_date = $data['sale_date'];
-        $newComic->type = $data['type'];
-        $artists = explode(', ', $data['artists']);
-        $newComic->artists = $artists;
-        $writers = explode(', ', $data['writers']);
-        $newComic->writers = $writers;
+        $data['artists'] = explode(', ', $data['artists']);
+        $data['writers'] = explode(', ', $data['writers']);
+        $newComic->fill($data);
         $newComic->save();
 
         return redirect()->route('admin.show', $newComic->id);
