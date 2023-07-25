@@ -47,10 +47,12 @@ class PageController extends Controller
         $newComic->series = $data['series'];
         $newComic->sale_date = $data['sale_date'];
         $newComic->type = $data['type'];
-        $newComic->artists = $data['artists'];
-        $newComic->writers = $data['writers'];
+        $artists = explode(', ', $data['artists']);
+        $newComic->artists = $artists;
+        $writers = explode(', ', $data['writers']);
+        $newComic->writers = $writers;
         $newComic->save();
-        
+
         return redirect()->route('admin.show', $newComic->id);
     }
 
