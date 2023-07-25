@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Laravel DC Comics - View Comic')
+@section('title', 'DC Comics Admin Panel - View Comic')
 
 @section('main-section')
 <div class="container p-5">
