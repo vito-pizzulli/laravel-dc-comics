@@ -36,15 +36,15 @@
             <div class="col-6">
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
-                    <textarea class="form-control" id="description" name="description" rows="10" required></textarea>
+                    <textarea class="form-control" id="description" name="description" rows="10" style="resize: none" required></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="artists" class="form-label">Artists</label>
-                    <textarea class="form-control" id="artists" name="artists" required></textarea>
+                    <textarea class="form-control" id="artists" name="artists" style="resize: none" required></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="writers" class="form-label">Writers</label>
-                    <textarea class="form-control" id="writers" name="writers" required></textarea>
+                    <textarea class="form-control" id="writers" name="writers" style="resize: none" required></textarea>
                 </div>
             </div>
         </div>
