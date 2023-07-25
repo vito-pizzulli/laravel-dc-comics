@@ -20,3 +20,12 @@
 
 ## Bonus
 <p>Creare il seeder per la tabella comics utilizzando il file in allegato.</p>
+
+## Milestone 3
+<p>Completare le operazioni di:</p>
+
+- create()
+- store()
+
+## Bonus
+<p>Aggiungere le fillable e usare il metodo fill nel metodo store.</p>
