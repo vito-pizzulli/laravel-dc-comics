@@ -3,7 +3,7 @@
         <div class="container">
             <a href="{{ route('admin.index') }}">
                 <img src="{{ Vite::asset('resources/img/logo.png') }}" alt="DC Logo" style="width: 80px">
-                <h1 class="d-inline-block ms-3 fs-3 text-white">Laravel DC Comics Index Panel</h1>
+                <h1 class="d-inline-block ms-3 fs-3 text-white">DC Comics Admin Panel</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="txt-white">
                 <span class="navbar-toggler-icon"></span>
