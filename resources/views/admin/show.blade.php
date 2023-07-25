@@ -6,7 +6,7 @@
 <div class="container p-5">
     <div class="row">
         <div class="col-8">
-            <h2><span class="text-primary">Title:</span> {{ $comic->title }}</h2>
+            <h2 class="mb-4"><span class="text-primary">Title:</span> {{ $comic->title }}</h2>
             <p><span class="text-primary">ID:</span> {{ $comic->id }}</p>
             <p><span class="text-primary">Description:</span> {{ $comic->description }}</p>
             <p><span class="text-primary">Price:</span> {{ $comic->price }}</p>
