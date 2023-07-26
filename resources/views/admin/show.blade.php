@@ -4,7 +4,7 @@
 
 @section('main-section')
 <div class="container p-5">
-    <h1 class="pb-3">View Comic</h1>
+    <h1 class="pb-3 text-primary">View Comic</h1>
     <div class="row">
         <div class="col-8">
             <h2 class="mb-4"><span class="text-primary">Title:</span> {{ $comic->title }}</h2>

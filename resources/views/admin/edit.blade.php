@@ -4,7 +4,7 @@
 
 @section('main-section')
 <div class="container p-5">
-    <h1 class="pb-3">Edit Comic</h1>
+    <h1 class="pb-3 text-primary">Edit Comic</h1>
     <form action="{{ route('admin.update', $comic->id) }}" method="POST">
         @csrf
         @method('PUT')
