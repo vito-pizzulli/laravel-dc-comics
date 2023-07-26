@@ -51,7 +51,12 @@
             </div>
         </div>
         
-        <button type="submit" class="btn btn-primary">Confirm</button>
+        <button type="submit" class="btn btn-sm btn-primary me-2 fs-5">Confirm</button>
+        <form action="{{ route('admin.destroy', $comic->id) }}" class="d-inline-block" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-sm btn-secondary fs-5">Delete Comic</button>
+        </form>
     </form>
 </div>
 @endsection
