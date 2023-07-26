@@ -31,7 +31,7 @@
                             <td>
                                 <a class="btn btn-sm btn-primary m-1" href="{{ route('admin.show', $comic->id) }}">View</a>
                                 <a class="btn btn-sm btn-warning m-1" href="{{ route('admin.edit', $comic->id) }}">Edit</a>
-                                <form action="{{ route('admin.destroy', $comic->id) }}" class="d-inline-block m-1" method="POST">
+                                <form action="{{ route('admin.destroy', $comic->id) }}" class="form-delete d-inline-block m-1" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-sm btn-secondary me-2">Delete</button>
@@ -45,4 +45,19 @@
     </div>
 
     {{ $comicsList->links() }}
+@endsection
+
+@section('custom-scripts-tail')
+    <script>
+        const deleteForms = document.querySelectorAll('form.form-delete');
+        deleteForms.forEach(deleteForm => {
+            deleteForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const deleteConfirm = window.confirm('Are you sure you want to delete this comic? This action is irreversible.');
+                if (deleteConfirm) {
+                    this.submit();
+                }
+            });
+        });
+    </script>
 @endsection
