@@ -5,7 +5,7 @@
 @section('main-section')
 <div class="container p-5">
     <h1 class="pb-3 text-primary">Edit Comic</h1>
-    <form action="{{ route('admin.update', $comic->id) }}" method="POST">
+    <form action="{{ route('admin.update', $comic->id) }}" method="POST" class="mb-2">
         @csrf
         @method('PUT')
         <div class="row">
@@ -53,11 +53,11 @@
         
         <button type="submit" class="btn btn-sm btn-primary me-2 fs-5">Confirm</button>
         <button type="reset" class="btn btn-sm btn-warning me-2 fs-5">Undo Changes</button>
-        <form action="{{ route('admin.destroy', $comic->id) }}" class="d-inline-block" method="POST">
-            @csrf
-            @method('DELETE')
-            <button type="submit" class="btn btn-sm btn-secondary fs-5">Delete Comic</button>
-        </form>
+    </form>
+    <form action="{{ route('admin.destroy', $comic->id) }}" class="form-delete" method="POST">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn btn-sm btn-secondary fs-5">Delete Comic</button>
     </form>
 </div>
 @endsection
