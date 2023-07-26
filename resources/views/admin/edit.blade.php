@@ -52,6 +52,7 @@
         </div>
         
         <button type="submit" class="btn btn-sm btn-primary me-2 fs-5">Confirm</button>
+        <button type="reset" class="btn btn-sm btn-warning me-2 fs-5">Undo Changes</button>
         <form action="{{ route('admin.destroy', $comic->id) }}" class="d-inline-block" method="POST">
             @csrf
             @method('DELETE')

@@ -50,7 +50,8 @@
             </div>
         </div>
         
-        <button type="submit" class="btn btn-primary">Confirm</button>
+        <button type="submit" class="btn btn-sm btn-primary me-2 fs-5">Confirm</button>
+        <button type="reset" class="btn btn-sm btn-warning fs-5">Clear Fields</button>
     </form>
 </div>
 @endsection
