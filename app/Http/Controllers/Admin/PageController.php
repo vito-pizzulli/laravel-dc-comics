@@ -57,7 +57,7 @@ class PageController extends Controller
     public function show($id)
     {
         $comic = Comic::findOrFail($id);
-        return view('admin.show', compact ('comic'));
+        return view('admin.show', compact('comic'));
     }
 
     /**
@@ -68,7 +68,8 @@ class PageController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+        return view('admin.edit', compact('comic'));
     }
 
     /**
