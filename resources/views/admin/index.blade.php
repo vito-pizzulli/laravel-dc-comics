@@ -6,6 +6,25 @@
 <div class="container p-5">
     <h1 class="pb-3 text-primary">Comics List</h1>
     <div class="row">
+        @if (session('deleted'))
+            <div class="col-12">
+                <div class="alert alert-success">
+                    {{ session('deleted') }} has been deleted successfully.
+                </div>
+            </div>
+        @elseif ( session('created'))
+            <div class="col-12">
+                <div class="alert alert-success">
+                    {{ session('created') }} has been created successfully.
+                </div>
+            </div>
+        @elseif ( session('updated'))
+            <div class="col-12">
+                <div class="alert alert-success">
+                    {{ session('updated') }} has been updated successfully.
+                </div>
+            </div>
+        @endif
         <div class="col-12">
             <table class="table table-bordered table-striped table-hover text-center">
                 <thead>

@@ -43,7 +43,7 @@ class PageController extends Controller
         $data['writers'] = explode(', ', $data['writers']);
         $newComic->fill($data);
         $newComic->save();
-        return redirect()->route('admin.show', $newComic->id);
+        return redirect()->route('admin.index')->with('created', $newComic->title);
     }
 
     /**
@@ -84,7 +84,7 @@ class PageController extends Controller
         $data['writers'] = explode(', ', $data['writers']);
         $comic = Comic::findOrFail($id);
         $comic->update($data);
-        return redirect()->route('admin.show', $comic->id);
+        return redirect()->route('admin.index')->with('updated', $comic->title);
     }
 
     /**
@@ -97,6 +97,6 @@ class PageController extends Controller
     {   
         $comic = Comic::findOrFail($id);
         $comic->delete();
-        return redirect()->route('admin.index');
+        return redirect()->route('admin.index')->with('deleted', $comic->title);
     }
 }
