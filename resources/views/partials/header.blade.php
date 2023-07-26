@@ -10,10 +10,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav w-100 justify-content-end">
-                    <li class="nav-item">
+                    <li class="nav-item m-3">
                         <a class="my_nav-link fs-5 {{ (Route::currentRouteName() == 'admin.index') ? 'active': ''}}" href="{{ route('admin.index') }}">Comics List</a>
                     </li>
-                    <li class="nav-item ms-3">
+                    <li class="nav-item m-3">
                         <a class="my_nav-link fs-5 {{ (Route::currentRouteName() == 'admin.create') ? 'active': ''}}" href="{{ route('admin.create') }}">Add New Comic</a>
                     </li>
                 </ul>
