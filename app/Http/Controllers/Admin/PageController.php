@@ -94,7 +94,9 @@ class PageController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
-        //
+    {   
+        $comic = Comic::findOrFail($id);
+        $comic->delete();
+        return redirect()->route('admin.index');
     }
 }
