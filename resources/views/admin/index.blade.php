@@ -4,7 +4,7 @@
 
 @section('main-section')
 <div class="container p-5">
-    <h1 class="pb-3">Comics List</h1>
+    <h1 class="pb-3 text-primary">Comics List</h1>
     <div class="row">
         <div class="col-12">
             <table class="table table-bordered table-striped table-hover text-center">
@@ -31,6 +31,11 @@
                             <td>
                                 <a class="btn btn-sm btn-primary me-2" href="{{ route('admin.show', $comic->id) }}">View</a>
                                 <a class="btn btn-sm btn-warning me-2" href="{{ route('admin.edit', $comic->id) }}">Edit</a>
+                                <form action="{{ route('admin.destroy', $comic->id) }}" class="d-inline-block" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-sm btn-secondary me-2">Delete</button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach
