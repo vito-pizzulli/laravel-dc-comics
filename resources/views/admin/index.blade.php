@@ -7,7 +7,7 @@
     <h1 class="pb-3">Comics List</h1>
     <div class="row">
         <div class="col-12">
-            <table class="table table-bordered table-striped table-hover">
+            <table class="table table-bordered table-striped table-hover text-center">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -22,13 +22,16 @@
                 <tbody>
                     @foreach ($comicsList as $comic)
                         <tr>
-                            <th scope="row" class="text-center">{{ $comic->id }}</th>
+                            <th scope="row">{{ $comic->id }}</th>
                             <td>{{ $comic->title }}</td>
-                            <td class="text-center">{{ $comic->price }}</td>
+                            <td>{{ $comic->price }}</td>
                             <td>{{ $comic->series }}</td>
-                            <td class="text-center">{{ $comic->sale_date }}</td>
-                            <td class="text-center">{{ $comic->type }}</td>
-                            <td class="text-center"><a class="btn btn-sm btn-primary me-2" href="{{ route('admin.show', $comic->id) }}">View</a></td>
+                            <td>{{ $comic->sale_date }}</td>
+                            <td>{{ $comic->type }}</td>
+                            <td>
+                                <a class="btn btn-sm btn-primary me-2" href="{{ route('admin.show', $comic->id) }}">View</a>
+                                <a class="btn btn-sm btn-warning me-2" href="{{ route('admin.edit', $comic->id) }}">Edit</a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
