@@ -4,6 +4,7 @@
 
 @section('main-section')
 <div class="container p-5">
+    <h1 class="pb-3">Add New Comic</h1>
     <form action="{{ route('admin.store') }}" method="POST">
         @csrf
         <div class="row">

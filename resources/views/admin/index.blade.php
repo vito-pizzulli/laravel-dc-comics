@@ -4,6 +4,7 @@
 
 @section('main-section')
 <div class="container p-5">
+    <h1 class="pb-3">Comics List</h1>
     <div class="row">
         <div class="col-12">
             <table class="table table-bordered table-striped table-hover">
