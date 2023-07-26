@@ -29,3 +29,13 @@
 
 ## Bonus
 <p>Aggiungere le fillable e usare il metodo fill nel metodo store.</p>
+
+## Milestone 4
+<p>Completare le operazioni di:</p>
+
+- edit()
+- update()
+- destroy()
+
+## Bonus
+<p>Tramite javascript, quando l'utente clicca sul pulsante "delete", chiedere conferma della cancellazione, prima di eliminare l'elemento.</p>
