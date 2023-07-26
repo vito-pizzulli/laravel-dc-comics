@@ -38,13 +38,11 @@ class PageController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        
         $newComic = new Comic();
         $data['artists'] = explode(', ', $data['artists']);
         $data['writers'] = explode(', ', $data['writers']);
         $newComic->fill($data);
         $newComic->save();
-
         return redirect()->route('admin.show', $newComic->id);
     }
 
@@ -80,8 +78,13 @@ class PageController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
+    {   
+        $data = $request->all();
+        $data['artists'] = explode(', ', $data['artists']);
+        $data['writers'] = explode(', ', $data['writers']);
+        $comic = Comic::findOrFail($id);
+        $comic->update($data);
+        return redirect()->route('admin.show', $comic->id);
     }
 
     /**
