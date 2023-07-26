@@ -16,11 +16,11 @@
             <p><span class="text-primary">Type:</span> {{ $comic->type }}</p>
             <p><span class="text-primary">Artists:</span> {{ implode(', ', $comic->artists) }}.</p>
             <p class="mb-4"><span class="text-primary">Writers:</span> {{ implode(', ', $comic->writers) }}.</p>
-            <a class="btn btn-sm btn-warning me-2 fs-5" href="{{ route('admin.edit', $comic->id) }}">Edit</a>
+            <a class="btn btn-sm btn-warning me-2 fs-5" href="{{ route('admin.edit', $comic->id) }}">Edit Comic</a>
             <form action="{{ route('admin.destroy', $comic->id) }}" class="d-inline-block" method="POST">
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="btn btn-sm btn-secondary me-2 fs-5">Delete</button>
+                <button type="submit" class="btn btn-sm btn-secondary me-2 fs-5">Delete Comic</button>
             </form>
         </div>
         <div class="col-4">
